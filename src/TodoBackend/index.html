@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TodoBackend</title>
+    <script>
+        function pageLoaded() {
+            var apiLink = 'http://' + window.location.hostname + ':' + window.location.port + '/api/todos';
+            document.getElementById('apilink').innerText = apiLink;
+            document.getElementById('specslink').setAttribute('href', 'http://www.todobackend.com/specs/index.html?' + apiLink);
+            document.getElementById('clientlink').setAttribute('href', 'http://www.todobackend.com/client/index.html?' + apiLink);
+        }
+    </script>
+</head>
+<body onload="pageLoaded()">
+    <h1>TodoBackend</h1>
+    <pre id="apilink"></pre>
+    <ul>
+        <li>
+            <a id="specslink">run the specs</a>
+        </li>
+        <li>
+            <a id="clientlink">open in client</a>
+        </li>
+    </ul>
+</body>
+</html>
