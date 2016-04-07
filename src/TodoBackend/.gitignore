@@ -1,0 +1,8 @@
+node_modules
+packages
+bin
+debug
+obj
+*.suo
+*.user
+pack.ps1
