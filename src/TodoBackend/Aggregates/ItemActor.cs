@@ -14,8 +14,8 @@ namespace TodoBackend
 		{
 			Receive<ItemAdded>(added => {_item = new TodoItem();});
 			Receive<GetValue> (msg => this.Sender.Tell (_item));
-			Receive<SetTitle> (msg => _item.title = msg.Title);
-			Receive<Complete> (msg => _item.completed = true);
+			Receive<SetTitle> (msg => _item.Title = msg.Title);
+			Receive<Complete> (msg => _item.Completed = true);
 		}
 	}
 	

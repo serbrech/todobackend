@@ -2,11 +2,18 @@
 
 namespace TodoBackend
 {
-	public class RemoveItem
-	{
-		public RemoveItem ()
-		{
-		}
-	}
+
+	public interface ICommand { }
+
+	public class Remove : ICommand { } 
+
+	public class Add : ICommand { }
+
+	public class SetTitle : ICommand {  }
+
+	public class Activate : ICommand { }
+
+	public class Complete : ICommand { }
+
 }
 
